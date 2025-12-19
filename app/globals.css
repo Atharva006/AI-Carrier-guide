@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+/* @import "tw-animate-css";  <-- REMOVED TO FIX CRASH */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -14,6 +14,14 @@
   --color-sidebar-accent: var(--sidebar-accent);
   --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
+  --color-brand-primary: #1f44f9;
+  --color-bg-light: #f5f6f8;
+  --color-bg-dark: #0f1323;
+  --color-card-dark: #181b29;
+  --color-input-dark: #111218;
+  --color-border-dark: #2d3142;
+  --color-primary: var(--brand-primary);
+  --color-primary-foreground: #ffffff;
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
   --color-chart-5: var(--chart-5);
@@ -54,6 +62,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
+  
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
@@ -79,11 +88,19 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --background: #f5f6f8; /* background-light */
+  --foreground: #0f172a;
+  --brand-primary: #1f44f9;
+  --font-manrope: "Manrope", sans-serif;
+  --radius: 0.5rem; /* rounded-lg */
 }
 
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
+  --background: #0f1323; /* background-dark */
+  --foreground: #ffffff;
+  --brand-primary: #1f44f9;
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
