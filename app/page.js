@@ -1,6 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Mail, Eye, ArrowRight, Sparkles } from "lucide-react";
+// You can use these Clerk components if you want to replace the manual form later:
+// import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
 export default function LoginPage() {
   return (
@@ -62,10 +63,8 @@ export default function LoginPage() {
             
             <div className="flex gap-4 items-center text-sm font-medium text-slate-500 dark:text-slate-400">
               <div className="flex -space-x-3">
-                {/* Placeholders for avatars - using simple divs for demo, replace with <Image> if you have assets */}
                 {[1, 2, 3].map((i) => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white dark:border-bg-dark bg-gray-300 overflow-hidden relative">
-                     {/* Use Next/Image here for real avatars */}
                      <div className="w-full h-full bg-slate-200 dark:bg-slate-700" /> 
                   </div>
                 ))}
@@ -92,12 +91,10 @@ export default function LoginPage() {
             {/* Social Login Buttons */}
             <div className="flex flex-col gap-3 mb-6">
               <button className="flex items-center justify-center gap-3 w-full h-12 bg-gray-50 dark:bg-[#232633] hover:bg-gray-100 dark:hover:bg-[#2e3242] border border-gray-200 dark:border-border-dark rounded-lg text-sm font-bold transition-all text-slate-700 dark:text-white cursor-pointer">
-                {/* Google Icon Placeholder */}
                 <div className="w-5 h-5 rounded-full bg-slate-400 flex items-center justify-center text-[10px] text-white">G</div>
                 Sign in with Google
               </button>
               <button className="flex items-center justify-center gap-3 w-full h-12 bg-gray-50 dark:bg-[#232633] hover:bg-gray-100 dark:hover:bg-[#2e3242] border border-gray-200 dark:border-border-dark rounded-lg text-sm font-bold transition-all text-slate-700 dark:text-white cursor-pointer">
-                 {/* LinkedIn Icon Placeholder */}
                  <div className="w-5 h-5 rounded-md bg-blue-700 text-white flex items-center justify-center text-[10px]">in</div>
                 Sign in with LinkedIn
               </button>
@@ -114,7 +111,6 @@ export default function LoginPage() {
 
             {/* Email Form */}
             <form className="flex flex-col gap-5">
-              {/* Email Field */}
               <label className="flex flex-col gap-1.5">
                 <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">
                   Email Address
@@ -131,7 +127,6 @@ export default function LoginPage() {
                 </div>
               </label>
 
-              {/* Password Field */}
               <label className="flex flex-col gap-1.5">
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">
@@ -156,7 +151,6 @@ export default function LoginPage() {
                 </div>
               </label>
 
-              {/* Submit Button */}
               <button
                 type="button"
                 className="mt-2 w-full h-12 bg-brand-primary hover:bg-blue-600 active:scale-[0.98] text-white font-bold rounded-lg shadow-lg shadow-brand-primary/25 transition-all flex items-center justify-center gap-2 cursor-pointer"
